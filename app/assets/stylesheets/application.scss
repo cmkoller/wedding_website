@@ -1,0 +1,155 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+
+ */
+
+@import 'foundation_and_overrides';
+
+body {
+  /* background: #D7E9E9; */
+  background: #EFF9F9;
+  /* background: linear-gradient(180deg, #e4e1e3, #e4e1e3 150px, #8395a1 700px); */
+}
+
+.main {
+  /* background: image_url("pink_rice.png"); */
+  padding: 20px;
+}
+
+nav {
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.title {
+  .title-stuff-wrapper {
+    overflow: hidden;
+  }
+
+  h1 {
+    font-family: 'provence';
+    font-size: 60px;
+    padding-top: 41px;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0 55px;
+    display: inline-block;;
+
+    &:before,
+    &:after {
+      content: '';
+      background-image: url(/assets/flame-08bb72ee5f7c42645e8947c428df491b3d02f0800ccaa447464f12c607712354.png);
+      width: 50px;
+      height: 58px;
+      display: inline-block;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 25px;
+    }
+
+    &:before {
+      transform: scaleX(-1);
+      left: -3px;
+    }
+
+    &:after {
+      right: -3px;
+    }
+  }
+
+  img.line {
+    max-width: 569px;
+    position: relative;
+    top: -55px;
+    display: block;
+    margin: auto;
+  }
+}
+
+nav ul {
+  list-style: none;
+  margin-left: 0;
+  margin-top: -90px;
+  position: relative;
+  z-index: 1;
+
+  li {
+    display: inline-block;
+  }
+
+  li a {
+    /* color: #F57B7B; */
+    color: $peach;
+    padding: 0 26px;
+    font-family: pompiere;
+    font-size: 27px;
+
+    &:hover {
+      color: darken($peach, 10%);
+    }
+  }
+}
+
+.flame {
+  width: 50px;
+  position: absolute;
+  bottom: 24px;
+
+  &#first {
+    left: 22px;
+    transform: scaleX(-1);
+  }
+
+  &#second {
+    right: 22px;
+  }
+}
+
+#date {
+  font-family: 'pompiere';
+  font-weight: bold;
+  color: #F5A0A7;
+  font-size: 76px;
+  text-shadow: 2px 3px #86686A;
+  text-shadow:
+    1px 1px #86686A,
+    2px 2px #86686A,
+    3px 3px #86686A,
+    4px 4px #86686A;
+
+  @media #{$small-only} {
+    font-size: 60px;
+  }
+}
+
+#date-wrapper {
+  max-width: 516px;
+  margin: auto;
+}
+
+.text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+#location {
+  font-family: pompiere;
+  position: relative;
+
+}
