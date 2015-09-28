@@ -1,0 +1,35 @@
+#date {
+  font-family: 'pompiere';
+  font-weight: bold;
+  color: $peach;
+  font-size: 76px;
+  text-shadow: 2px 3px #86686A;
+  text-shadow:
+    1px 1px #86686A,
+    2px 2px #86686A,
+    3px 3px #86686A,
+    4px 4px #86686A;
+
+  @media #{$small-only} {
+    font-size: 60px;
+  }
+}
+
+#date-wrapper {
+  max-width: 516px;
+  margin: auto;
+  position: relative;
+
+  .text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 100%;
+  }
+}
+
+#location {
+  font-family: pompiere;
+  position: relative;
+}

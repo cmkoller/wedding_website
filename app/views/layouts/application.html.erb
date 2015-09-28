@@ -6,30 +6,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <nav class="text-center">
-    <div class="title">
-      <div class="title-stuff-wrapper">
-        <h1>
-          <a href="/">Justin & Christina</a>
-        </h1>
-        <%= image_tag("2.png", class: "line") %>
-      </div>
-    </div>
-    <ul class="text-center">
-      <li><a href="#">Accomadations</a></li>
-      <li><a href="#">Details</a></li>
-      <li><a href="#">Wedding Party</a></li>
-      <li><a href="#">Registry</a></li>
-    </ul>
-  </section>
-  </nav>
-
-  <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
-      <%= value %>
-    </div>
-  <%- end -%>
+  <%= render "layouts/header" %>
+  <%= render "layouts/flash" %>
 
   <div class="container">
     <div class="row">
