@@ -1,0 +1,20 @@
+.accommodations-section {
+  span {
+    font-family: $header-font-family;
+    color: $peach;
+  }
+
+  .accom-header {
+    margin-bottom: 20px;
+
+    span:first-of-type:after {
+      content: "|";
+      color: #ccc;
+      padding: 0 8px 0 10px;
+    }
+  }
+
+  .website {
+    word-wrap: break-word;
+  }
+}

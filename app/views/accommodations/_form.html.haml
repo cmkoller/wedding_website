@@ -1,0 +1,27 @@
+
+= form_for @accommodation do |f|
+  = f.label :title
+  = f.text_field :title
+
+  = f.label :price
+  = f.text_field :price
+
+  = f.label :distance
+  = f.text_field :distance
+
+  = f.label :description
+  = f.text_area :description
+
+  = f.label :address_line_1
+  = f.text_field :address_line_1
+
+  = f.label :address_line_2
+  = f.text_field :address_line_2
+
+  = f.label :website
+  = f.text_field :website
+
+  = f.label :phone
+  = f.text_field :phone
+
+  = f.submit class: "button"

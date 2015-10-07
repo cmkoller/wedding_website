@@ -63,13 +63,13 @@ nav ul {
   }
 
   li a {
-    /* color: #F57B7B; */
     color: $peach;
     padding: 0 26px;
     font-family: pompiere;
     font-size: 27px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: darken($peach, 10%);
     }
   }

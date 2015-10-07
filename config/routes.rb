@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
+  resources :accommodations, only: [:index, :new, :create, :edit, :update]
+
+  get "details" => "homes#details"
+  get "wedding-party" => "homes#wedding_party"
+  get "registry" => "homes#registry"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

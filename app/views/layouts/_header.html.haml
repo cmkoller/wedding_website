@@ -1,15 +1,14 @@
 %nav.text-center
   .title
     .title-stuff-wrapper
-      %h1
-        %a{:href => "/"} Justin  Christina
-      = image_tag(2.png, class: line)
+      %h1= link_to "Justin & Christina", root_path
+      = image_tag "2.png", class: "line"
   %ul.text-center
     %li
-      %a{:href => "#"} Accomadations
+      = link_to "Accommodations", accommodations_path
     %li
-      %a{:href => "#"} Details
+      = link_to "Details", "/details"
     %li
-      %a{:href => "#"} Wedding Party
+      = link_to "Wedding Party", "/wedding-party"
     %li
-      %a{:href => "#"} Registry
+      = link_to "Registry", "/registry"
