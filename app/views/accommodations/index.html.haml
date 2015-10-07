@@ -1,7 +1,7 @@
-.accommodations-section(data-equalizer-watch)
+.accommodations-section.row(data-equalizer)
   - @accommodations.each do |a|
-    .medium-6.columns(data-equalize)
-      .panel
+    .medium-6.columns
+      .panel(data-equalizer-watch)
         .accom-header.text-center
           %h3.title= a.title
           %span.price= a.price
@@ -17,10 +17,13 @@
               = a.address_line_2
 
           .large-7.columns
-            .website
-              %span.tiny-title WEBSITE:
-              = link_to a.website, a.website
-
             .phone
               %span.tiny-title PHONE:
               = a.phone
+            - if a.email.present?
+              .email
+                %span.tiny-title EMAIL:
+                = a.email
+
+        .website.text-center
+          = link_to "WEBSITE", a.website, class: "grey-blue-button tiny", target: "_blank"

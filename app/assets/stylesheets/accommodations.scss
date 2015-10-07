@@ -1,4 +1,10 @@
 .accommodations-section {
+  position: relative;
+
+  .panel {
+    padding-bottom: 65px;
+  }
+
   span {
     font-family: $header-font-family;
     color: $peach;
@@ -15,6 +21,10 @@
   }
 
   .website {
-    word-wrap: break-word;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
