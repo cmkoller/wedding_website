@@ -1,6 +1,10 @@
 class AccommodationsController < ApplicationController
   def index
-    @accommodations = Accommodation.all
+    if params[:order] == "distance"
+      @accommodations = Accommodation.order(:distance)
+    else
+      @accommodations = Accommodation.order(:price)
+    end
   end
 
   def new
