@@ -117,6 +117,7 @@ $include-html-global-classes: $include-html-classes;
 
 // CK'S ADDED COLORS
 $peach: #F5A0A7;
+$grey-blue: #9AB3C3;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
@@ -454,7 +455,7 @@ $header-font-family: pompiere;
 // $button-font-family: $body-font-family;
 // $button-font-color: $white;
 // $button-font-color-alt: $oil;
-// $button-font-tny: rem-calc(11);
+$button-font-tny: rem-calc(12);
 // $button-font-sml: rem-calc(13);
 // $button-font-med: rem-calc(16);
 // $button-font-lrg: rem-calc(20);
