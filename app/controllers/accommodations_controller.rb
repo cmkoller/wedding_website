@@ -3,7 +3,7 @@ class AccommodationsController < ApplicationController
     if params[:order] == "distance"
       @accommodations = Accommodation.order(:distance)
     else
-      @accommodations = Accommodation.order(:price)
+      @accommodations = Accommodation.order(:price_int)
     end
   end
 
