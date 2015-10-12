@@ -4,7 +4,7 @@
     =link_to "PRICE", "?order=price"
   %dd{class: "#{'active' if params[:order] == 'distance'}"}
     =link_to "DISTANCE", "?order=distance"
-</dl>
+
 .accommodations-section.row(data-equalizer)
   - @accommodations.each do |a|
     .medium-6.columns
