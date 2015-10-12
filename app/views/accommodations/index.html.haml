@@ -1,9 +1,9 @@
 %dl.sub-nav
   %dt Sort by:
   %dd{class: "#{'active' unless params[:order] == 'distance'}"}
-    =link_to "Price", "?order=price"
+    =link_to "PRICE", "?order=price"
   %dd{class: "#{'active' if params[:order] == 'distance'}"}
-    =link_to "Distance", "?order=distance"
+    =link_to "DISTANCE", "?order=distance"
 </dl>
 .accommodations-section.row(data-equalizer)
   - @accommodations.each do |a|

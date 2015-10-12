@@ -1247,7 +1247,7 @@ $button-font-tny: rem-calc(12);
 // $sub-nav-list-padding-top: rem-calc(4);
 
 // We use this to control the definition
-// $sub-nav-font-family: $body-font-family;
+$sub-nav-font-family: $header-font-family;
 // $sub-nav-font-size: rem-calc(14);
 // $sub-nav-font-color: $aluminum;
 // $sub-nav-font-weight: $font-weight-normal;
@@ -1260,7 +1260,7 @@ $button-font-tny: rem-calc(12);
 // We use these to control the active item styles
 
 // $sub-nav-active-font-weight: $font-weight-normal;
-// $sub-nav-active-bg: $primary-color;
+$sub-nav-active-bg: $grey-blue;
 // $sub-nav-active-bg-hover: scale-color($sub-nav-active-bg, $lightness: -14%);
 // $sub-nav-active-color: $white;
 // $sub-nav-active-padding: $sub-nav-padding;
