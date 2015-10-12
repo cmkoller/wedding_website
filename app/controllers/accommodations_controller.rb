@@ -42,6 +42,8 @@ class AccommodationsController < ApplicationController
       :address_line_1,
       :address_line_2,
       :website,
+      :email,
+      :price_int,
       :phone
     )
   end
