@@ -5,7 +5,7 @@ class HomesController < ApplicationController
   def details
   end
 
-  def wedding_party
+  def directions
   end
 
   def registry

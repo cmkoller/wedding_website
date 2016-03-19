@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :accommodations, only: [:index, :new, :create, :edit, :update]
 
   get "details" => "homes#details"
-  get "wedding-party" => "homes#wedding_party"
+  get "directions" => "homes#directions"
   get "registry" => "homes#registry"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
