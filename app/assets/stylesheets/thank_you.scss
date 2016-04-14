@@ -1,8 +1,8 @@
 .thank-you {
   .wreath {
+    @include transform(translateX(-50%));
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
     width: 436px;
     top: 0;
   }
