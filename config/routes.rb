@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
+
   resources :accommodations, only: [:index, :new, :create, :edit, :update]
+  resources :rsvps, only: [:new, :create]
 
   get "details" => "homes#details"
   get "directions" => "homes#directions"

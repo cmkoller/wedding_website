@@ -1,0 +1,39 @@
+input[type="radio"],
+input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+input[type="radio"],
+input[type="checkbox"],
+label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+label {
+    position: relative;
+}
+
+input[type="radio"] + label:before,
+input[type="checkbox"] + label:before {
+    content: '';
+    background: transparent;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+input[type="radio"]:checked + label:before,
+input[type="checkbox"]:checked + label:before {
+    content: 'x';
+    font-size: 40px;
+    line-height: 0.55;
+}
