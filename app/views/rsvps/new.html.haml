@@ -2,6 +2,9 @@
   = form_for @rsvp do |f|
     %h1 RSVP
 
+    - if !@rsvp.errors.empty?
+      %p.error Please make sure to fill out all the fields.
+
     .names.columns.section
       = f.label :name, "M.", class: "m-label"
       = f.text_field :name
