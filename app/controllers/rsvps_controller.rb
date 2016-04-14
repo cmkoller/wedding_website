@@ -12,6 +12,9 @@ class RsvpsController < ApplicationController
     end
   end
 
+  def thank_you
+  end
+
   private
 
   def rsvp_params

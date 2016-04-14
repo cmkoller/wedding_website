@@ -1,0 +1,25 @@
+.thank-you {
+  .wreath {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 436px;
+    top: 0;
+  }
+
+  .thank-you-line-1 {
+    font-family: 'bromello';
+    font-weight: normal;
+    font-size: 66px;
+    line-height: 1;
+    margin-top: 145px;
+  }
+
+  .thank-you-line-2 {
+    font-family: 'provence';
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 158px;
+  }
+}

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "details" => "homes#details"
   get "directions" => "homes#directions"
   get "registry" => "homes#registry"
+  get "thank-you" => "rsvps#thank_you"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
