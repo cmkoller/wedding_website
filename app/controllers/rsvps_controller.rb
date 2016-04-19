@@ -1,4 +1,8 @@
 class RsvpsController < ApplicationController
+  def index
+    @rsvps = RSVP.all
+  end
+
   def new
     @rsvp = RSVP.new
   end

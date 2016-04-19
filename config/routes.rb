@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "directions" => "homes#directions"
   get "registry" => "homes#registry"
   get "thank-you" => "rsvps#thank_you"
+  get "just-a-little-bit-secret" => "rsvps#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
