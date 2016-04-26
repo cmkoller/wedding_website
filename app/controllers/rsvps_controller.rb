@@ -1,6 +1,6 @@
 class RsvpsController < ApplicationController
   def index
-    @rsvps = RSVP.all
+    @rsvps = RSVP.order('id DESC')
   end
 
   def new
@@ -17,6 +17,20 @@ class RsvpsController < ApplicationController
   end
 
   def thank_you
+  end
+
+  def record
+    @rsvp = RSVP.find(params[:id])
+    @rsvp.recorded = true
+    @rsvp.save
+    redirect_to "/just-a-little-bit-secret"
+  end
+
+  def unrecord
+    @rsvp = RSVP.find(params[:id])
+    @rsvp.recorded = false
+    @rsvp.save
+    redirect_to "/just-a-little-bit-secret"
   end
 
   private

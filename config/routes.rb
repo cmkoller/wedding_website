@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :accommodations, only: [:index, :new, :create, :edit, :update]
-  resources :rsvps, only: [:new, :create]
+  resources :rsvps, only: [:new, :create] do
+    member do
+      get 'record'
+      get 'unrecord'
+    end
+  end
 
   get "details" => "homes#details"
   get "directions" => "homes#directions"

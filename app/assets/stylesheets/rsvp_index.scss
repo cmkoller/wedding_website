@@ -1,0 +1,9 @@
+tr.recorded,
+tr.recorded:nth-of-type(even) {
+  background-color: $success-color;
+}
+
+tr.unrecorded,
+tr.unrecorded:nth-of-type(even) {
+  background-color: lighten($warning-color, 10%);
+}
