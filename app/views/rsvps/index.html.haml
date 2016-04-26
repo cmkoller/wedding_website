@@ -5,12 +5,14 @@
     %tr
       %th Name(s)
       %th Attending?
+      %th Number Attending
       %th Dietary Restrictions
-      %th Attending Fri?
+      %th Attending Friday?
   %tbody
     - @rsvps.each do |rsvp|
       %tr
         %td= rsvp.name
         %td= rsvp.attending_ceremony
+        %td= rsvp.number_attending
         %td= rsvp.dietary_restrictions
         %td= rsvp.attending_friday
