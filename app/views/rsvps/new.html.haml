@@ -1,0 +1,33 @@
+.rsvp-form.columns.medium-8.medium-centered
+  = form_for @rsvp do |f|
+    %h1 RSVP
+
+    - if !@rsvp.errors.empty?
+      %p.error Please make sure to fill out all the fields.
+
+    .names.columns.section
+      = f.label :name, "M.", class: "m-label"
+      = f.text_field :name
+
+      = f.radio_button :attending_ceremony, true
+      = f.label :attending_ceremony_true, "Accepts with pleasure"
+      = f.radio_button :attending_ceremony, false
+      = f.label :attending_ceremony_false, "Declines with regret"
+
+      .number-attending
+        = f.number_field :number_attending
+        = f.label :number_attending
+
+    .columns.section
+      = f.label :dietary_restrictions, "Dietary Restrictions:", class: "section-header"
+      = f.text_area :dietary_restrictions
+
+    .columns.section
+      %h3.section-header Friday Gathering:
+      = f.radio_button :attending_friday, true
+      = f.label :attending_friday_true, "Will be attending"
+      = f.radio_button :attending_friday, false
+      = f.label :attending_friday_false, "Will not be attending"
+
+    .columns.section.text-center
+      = f.submit "Send", class: "button"

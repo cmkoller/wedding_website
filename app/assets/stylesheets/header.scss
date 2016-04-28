@@ -32,7 +32,7 @@ nav {
     }
 
     &:before {
-      transform: scaleX(-1);
+      @include transform(scaleX(-1));
       left: -3px;
     }
 
@@ -81,8 +81,8 @@ nav ul {
   bottom: 24px;
 
   &#first {
+    @include transform(scaleX(-1));
     left: 22px;
-    transform: scaleX(-1);
   }
 
   &#second {

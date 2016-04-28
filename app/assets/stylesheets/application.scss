@@ -1,8 +1,20 @@
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
 @import 'foundation_and_overrides';
 @import 'accommodations';
 @import 'buttons';
+@import 'checkboxes';
 @import 'fonts';
 @import 'general';
 @import 'header';
 @import 'homepage-date';
+@import 'rsvp_form';
+@import 'rsvp_index';
+@import 'thank_you';
 @import 'utility-classes';

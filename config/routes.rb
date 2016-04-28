@@ -1,11 +1,20 @@
 Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
+
   resources :accommodations, only: [:index, :new, :create, :edit, :update]
+  resources :rsvps, only: [:new, :create] do
+    member do
+      get 'record'
+      get 'unrecord'
+    end
+  end
 
   get "details" => "homes#details"
   get "directions" => "homes#directions"
   get "registry" => "homes#registry"
+  get "thank-you" => "rsvps#thank_you"
+  get "just-a-little-bit-secret" => "rsvps#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

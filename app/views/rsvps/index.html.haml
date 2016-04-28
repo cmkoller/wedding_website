@@ -1,0 +1,23 @@
+%h1 RSVPs
+
+%table.rsvp-table
+  %thead
+    %tr
+      %th Name(s)
+      %th Attending?
+      %th Number Attending
+      %th Dietary Restrictions
+      %th Attending Friday?
+      %th Recorded?
+  %tbody
+    - @rsvps.each do |rsvp|
+      %tr{ class: "#{rsvp.recorded ? 'recorded' : 'unrecorded' }"}
+        %td= rsvp.name
+        %td= rsvp.attending_ceremony
+        %td= rsvp.number_attending
+        %td= rsvp.dietary_restrictions
+        %td= rsvp.attending_friday
+        - if rsvp.recorded
+          %td= link_to "Unrecord", unrecord_rsvp_path(rsvp), class: "button tiny unrecord-button"
+        - else
+          %td= link_to "Record", record_rsvp_path(rsvp), class: "button tiny record-button"
